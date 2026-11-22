@@ -1,0 +1,17 @@
+# Credenciais e sessao do Google: nunca versionar
+.notebooklm/
+storage_state.json
+master_token.json
+browser_profile/
+*.cookies
+.env
+
+# Instalacao local
+.notebooklm-py/
+.venv/
+python/
+__pycache__/
+*.pyc
+
+# Copias de seguranca criadas pelo instalador
+*.bak-*
