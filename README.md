@@ -103,6 +103,16 @@ powershell -ExecutionPolicy Bypass -File .\uninstall.ps1
 
 Para apagar também a sessão do login, acrescente `-RemoveLogin`. O `MCP_TIMEOUT` fica no `settings.json`, porque outros servidores aproveitam o mesmo limite.
 
+## Usar em qualquer lugar (modo remoto)
+
+O modo acima atende só o computador onde foi instalado. Para usar o NotebookLM no claude.ai, no app do celular e no Claude Code de outros computadores, publique o servidor a partir de uma máquina que fica ligada 24 h, pelo Tailscale Funnel:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\remoto\instalar-remoto.ps1 -Account conta@gmail.com
+```
+
+Pré-requisitos, conexão e segurança: [remoto/README.md](./remoto/README.md).
+
 ## Segurança
 
 - **Nenhuma credencial neste repositório.** O login fica só no seu computador, em `%USERPROFILE%\.notebooklm\`. Não copie essa pasta para o Git nem para a nuvem: ela dá acesso à sua conta Google.
